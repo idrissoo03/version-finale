@@ -16,6 +16,14 @@ int Membership::getId() const {
     return id;
 }
 
+Membership::~Membership() {
+}
+
+Membership::Membership(const Membership& other) {
+    id = other.id;
+    type = other.type;
+    price = other.price;
+}
 
 Membership& Membership::operator=(const Membership& other) {
     if (this != &other) {

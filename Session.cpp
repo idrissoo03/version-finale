@@ -18,6 +18,16 @@ int Session::getId() const {
     return id;
 }
 
+Session::~Session() {
+}
+
+Session::Session(const Session& other) {
+    id = other.id;
+    type = other.type;
+    date = other.date;
+    time = other.time;
+}
+
 Session& Session::operator=(const Session& other) {
     if (this != &other) {
         id = other.id;

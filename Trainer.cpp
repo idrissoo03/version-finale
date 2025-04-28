@@ -16,9 +16,14 @@ Trainer& Trainer::operator=(const Trainer& other) {
     }
     return *this;
 
-
 }
 
+Trainer::Trainer(const Trainer& other) : Person(other) {
+    specialty = other.specialty;
+}
+
+Trainer::~Trainer() {
+}
 
 
 ostream& operator<<(ostream& out, const Trainer& trainer) {

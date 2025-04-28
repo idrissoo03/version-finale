@@ -15,6 +15,8 @@ protected:
 public:
     Person();
     Person(int id, string name, int age, string phone);
+    Person(const Person& other); 
+    ~Person(); 
     int getId() const;
     string getName() const;
     int getAge() const;

@@ -16,10 +16,14 @@ int Resource::getId() const {
     return id;
 }
 
+Resource::~Resource() {
+}
 
-
-
-
+Resource::Resource(const Resource& other) {
+    id = other.id;
+    name = other.name;
+    availability = other.availability;
+}
 
 Resource& Resource::operator=(const Resource& other) {
     if (this != &other) {

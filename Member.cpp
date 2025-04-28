@@ -20,6 +20,14 @@ Member::Member(int id, string name, int age, string phone, string membershipType
     this->membershipType = membershipType;
 }
 
+Member::Member(const Member& other) : Person(other) {
+    memberID = other.memberID;
+    membershipType = other.membershipType;
+}
+
+Member::~Member() {
+}
+
 
 
 
@@ -152,7 +160,7 @@ void Member::writeToFile(const map<int, Member>& members, const string& filename
     for (auto it = members.begin(); it != members.end(); ++it) {
         const Member& member = it->second;
         file << member.getId() << "|"  << member.getName() << "|"<< member.getAge() << "|" << member.getPhone() << "|" << member.getMembershipType();
-        if (next(it) != members.end()) file << "\n"; // Avoid trailing newline at the end
+        if (next(it) != members.end()) file << "\n"; 
     }
     file.close();
     cout << "Membres sauvegardes dans " << filename << endl;
@@ -167,7 +175,7 @@ void Member::readFromFile(map<int, Member>& members, const string& filename) {
     members.clear();
     string line;
     while (getline(file, line)) {
-        if (line.empty()) continue; // Skip empty lines
+        if (line.empty()) continue;
         stringstream ss(line);
         string token;
         int id, age;

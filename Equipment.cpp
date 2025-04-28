@@ -17,6 +17,15 @@ int Equipment::getId() const {
 }
 
 
+Equipment::~Equipment() {
+}
+
+Equipment::Equipment(const Equipment& other) {
+    id = other.id;
+    name = other.name;
+    condition = other.condition;
+}
+
 Equipment& Equipment::operator=(const Equipment& other) {
     if (this != &other) {
         id = other.id;

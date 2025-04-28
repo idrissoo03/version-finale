@@ -15,6 +15,8 @@ private:
 public:
     Membership();
     Membership(int id, string type, double price);
+    ~Membership();
+    Membership(const Membership& other); 
     int getId() const;
     static void addMembership(vector<Membership>& memberships, istream& in = cin);
     static void viewMemberships(const vector<Membership>& memberships, ostream& out = cout);

@@ -170,7 +170,7 @@ void Feedback::viewFeedback(const vector<Feedback>& feedback, ostream& out) {
 
 void Feedback::trierFeedbackParNote(vector<Feedback>& feedback, ostream& out) {
     sort(feedback.begin(), feedback.end(), [](const Feedback& a, const Feedback& b) {
-        return a.getRating() > b.getRating(); // Tri par note décroissante
+        return a.getRating() > b.getRating(); 
     });
     for (const auto& f : feedback) {
         out << f << "-------------------" << endl;

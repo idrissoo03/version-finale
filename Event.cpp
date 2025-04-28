@@ -18,6 +18,15 @@ int Event::getId() const {
     return id;
 }
 
+Event::~Event() {
+}
+
+Event::Event(const Event& other) {
+    id = other.id;
+    type = other.type;
+    date = other.date;
+    maxParticipants = other.maxParticipants;
+}
 
 
 Event& Event::operator=(const Event& other) {

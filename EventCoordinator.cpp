@@ -19,6 +19,13 @@ EventCoordinator& EventCoordinator::operator=(const EventCoordinator& other) {
     return *this;
 }
 
+EventCoordinator::~EventCoordinator() {
+}
+
+EventCoordinator::EventCoordinator(const EventCoordinator& other) : Person(other) {
+    department = other.department;
+}
+
 
 
 ostream& operator<<(ostream& out, const EventCoordinator& coordinator) {
