@@ -15,6 +15,8 @@ private:
 public:
     Equipment();
     Equipment(int id, string name, string condition);
+    Equipment(const Equipment& other);
+    ~Equipment();
     int getId() const;
     static void addEquipment(vector<Equipment>& equipment, istream& in = cin);
     static void viewEquipment(const vector<Equipment>& equipment, ostream& out = cout);

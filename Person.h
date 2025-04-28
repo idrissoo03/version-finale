@@ -9,7 +9,6 @@ using namespace std;
 class Person {
 protected:
     int id;
-    string entityName;
     string name;
     int age;
     string phone;
@@ -20,9 +19,6 @@ public:
     string getName() const;
     int getAge() const;
     string getPhone() const;
-
-    virtual void display(ostream& out = cout) const; // Virtual method for displaying
-    virtual void edit(istream& in = cin); // Virtual method for editing
 
     Person& operator=(const Person& other);
     friend ostream& operator<<(ostream& out, const Person& person);

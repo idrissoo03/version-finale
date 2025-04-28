@@ -16,6 +16,8 @@ private:
 public:
     Session();
     Session(int id, string type, string date, string time);
+    Session(const Session& other);
+    ~Session();
     int getId() const;
     static void addSession(vector<Session>& sessions, istream& in = cin);
     static void viewSessions(const vector<Session>& sessions, ostream& out = cout);

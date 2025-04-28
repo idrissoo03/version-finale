@@ -15,6 +15,8 @@ private:
 public:
     Resource();
     Resource(int id, string name, bool availability);
+    Resource(const Resource& other);
+    ~Resource();
     int getId() const;
     static void addResource(vector<Resource>& resources, istream& in = cin);
     static void viewResources(const vector<Resource>& resources, ostream& out = cout);

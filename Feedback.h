@@ -16,6 +16,10 @@ private:
 public:
     Feedback();
     Feedback(int feedbackID, int memberID, string comment, int rating);
+    ~Feedback(); // Destructor
+    Feedback(const Feedback& other) = default; // Copy constructor
+    ~Feedback();
+
     int getFeedbackID() const;
     int getMemberID() const;
     int getRating() const;

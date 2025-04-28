@@ -14,6 +14,8 @@ private:
 public:
     Trainer();
     Trainer(int id, string name, int age, string phone, string specialty);
+    Trainer(const Trainer& other);
+    ~Trainer();
     static void addTrainer(list<Trainer>& trainers, istream& in = cin);
     static void viewTrainers(const list<Trainer>& trainers, ostream& out = cout);
 

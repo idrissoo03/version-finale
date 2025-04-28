@@ -21,6 +21,9 @@ private:
 public:
     Member();
     Member(int id, string name, int age, string phone, string membershipType);
+    ~Member();
+    Member(const Member& other) = default; 
+
     
     int getMemberID() const;
     string getMembershipType() const;

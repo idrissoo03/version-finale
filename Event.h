@@ -16,6 +16,8 @@ private:
 public:
     Event();
     Event(int id, string type, string date, int maxParticipants);
+    Event(const Event& other);
+    ~Event();
     int getId() const;
     static void addEvent(vector<Event>& events, istream& in = cin);
     static void viewEvents(const vector<Event>& events, ostream& out = cout);

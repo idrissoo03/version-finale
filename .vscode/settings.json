@@ -81,6 +81,7 @@
     "functional": "cpp",
     "tuple": "cpp",
     "variant": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "iosfwd": "cpp"
   }
 }
